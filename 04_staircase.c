@@ -1,9 +1,10 @@
 #include <stdio.h>
 void staircase(int n)
-{   for (int i = 0; i < n; i++)
+{
+    for (int i = 0; i < n; i++)
     {
 
-        for (int j = n-1; j > i; j--)
+        for (int j = n - 1; j > i; j--)
         {
 
             printf(" ");
@@ -16,7 +17,6 @@ void staircase(int n)
         printf("\n");
     }
 }
-       
 
 int main()
 {

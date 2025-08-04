@@ -1,20 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
-long long int extraLongFactorials(long long int fact){
-   
-    if(fact==0 || fact==1){
+long long int extraLongFactorials(long long int fact)
+{
+
+    if (fact == 0 || fact == 1)
+    {
         return 1;
     }
-    fact=fact*extraLongFactorials(fact-1);
+    fact = fact * extraLongFactorials(fact - 1);
     return fact;
 }
-int main(){
+int main()
+{
     long long int n;
     long long int factorial;
     printf("Enter number to calulate factrial:");
-    scanf("%lld",&n);
+    scanf("%lld", &n);
 
-    factorial=extraLongFactorials(n);
-    printf("%lld\n",factorial);
+    factorial = extraLongFactorials(n);
+    printf("%lld\n", factorial);
     return 0;
 }

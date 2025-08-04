@@ -1,30 +1,41 @@
-#include<stdlib.h>
-int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
- int diagonalDifference(int n,int matrix[n][n]){
-     int primaryDiaganolsum=0;
-     int secondaryDiagonal sum =0;
-     for(int i=0;i<n;i++){
-         primaryDiagnol sum+=matrix[i][i];
-         seconaryDiagonal sum+=matrix[i][n-i-1];
-     }
-     return
-     abs(primaryDiaganolsum-secondaryDiagonalsum);
- }
+#include <stdio.h>
+#include <stdlib.h>
+
+// Function to calculate diagonal difference
+int diagonalDifference(int n, int matrix[n][n])
+{
+
+    int primaryDiagonalSum = 0;
+    int secondaryDiagonalSum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        primaryDiagonalSum += matrix[i][i];
+        secondaryDiagonalSum += matrix[i][n - i - 1];
+    }
+
+    return abs(primaryDiagonalSum - secondaryDiagonalSum);
 }
- int main(){
-     int n;
-     printf("enter the size of matrix:");
-     scanf("%d",&n);
-     int matrix[n][n];
-     printf("enter the element of matrix :\n");
-     for(int i=0;i<n;i++){
-         for(int j=0;j<n;j++){
-             scanf("%d",  &matrix[i][j]);
-         }
-     }
-     //call function print the result
-     int result=Diaganoldifference(n,matrix);
-     printf("Diaganoldifference:%d",result);
- 
- return 0;
- }
+
+int main()
+{
+    int n;
+    printf("Enter the size of the matrix: ");
+    scanf("%d", &n);
+
+    int matrix[n][n];
+
+    printf("Enter the elements of the matrix:\n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    int result = diagonalDifference(n, matrix);
+    printf("Diagonal Difference: %d\n", result);
+
+    return 0;
+}

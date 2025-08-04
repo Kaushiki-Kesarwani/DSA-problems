@@ -2,6 +2,7 @@
 #include <stdlib.h>
 int migratoryBirds(int arr_count, int *arr)
 {
+
     int max, id;
     max = 0;
     int *type = (int *)malloc(5 * sizeof(int));
